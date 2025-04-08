@@ -34,12 +34,12 @@ def main():
             # print a message and prompt the user to enter their email and password again.
         if not Validation.validate_email(email) or not Validation.validate_password(password):
             attempts += 1
-            print("Invalid email or password. Please try again.")
+            print("\nInvalid email or password. Please try again.")
             email = input("Enter your email: ")
             password = input("Enter your password: ")
-
         # TODO: Otherwise, break out of the loop.
-        break;
+        else:
+            break
     # TODO: If the maximum number of attempts is reached, print a message and exit the program.
     if attempts == 3:
         print("Maximum attempts reached. Exiting the program.")
@@ -55,14 +55,14 @@ def main():
     # TODO: Present a menu of options to the user.
     # TODO: Allowing them to make deposits, withdrawals, or transfers between accounts.
     while True:
-        print("\nMenu:\n1. Deposit\n2. Withdraw\n3. Transfer\n4. Exit")
-        choice = input("Enter your choice (1-4): ")
+        print("\nMenu:\n1. Deposit\n2. Withdraw\n3. Transfer Funds\n4. Check balances\n5. Exit")
+        choice = input("\nEnter your choice (1-5) or q: ")
         # TODO: Create a list of valid choices.
-        valid_choices = ['1', '2', '3', '4']
+        valid_choices = ['1', '2', '3', '4', '5']
             # TODO: Use if/elif conditional statements to check the user's choice.
             # TODO: If the choice is in the list of valid choices, call the appropriate function.
             # TODO: Pass in the checking_account and savings_account objects.
-        if choice == '4':
+        if choice == '5' or choice == 'q':
             print("Exiting the program.")
             break
         elif choice == '1':
@@ -71,8 +71,10 @@ def main():
             handle_withdrawal(checking_account, savings_account)    
         elif choice == '3':
             handle_transfer(checking_account, savings_account)
+        elif choice == '4':
+            balances(checking_account, savings_account)
         else:
-            print("Invalid choice. Please select a valid option.")
+            print("Invalid choice. Please select a valid option.\n")
         # TODO: If the user enters an invalid choice, print a message.
 
 if __name__ == "__main__":

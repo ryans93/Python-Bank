@@ -17,7 +17,7 @@ def handle_withdrawal(checking, savings):
     After each withdrawal, the function prints the updated balance of the respective account.
     If the user enters an invalid choice, the function displays an error message and prompts again.
     """
-    print("Which account would you like to make a withdrawal?")
+    print("\nWhich account would you like to make a withdrawal?")
     # TODO: Prompt the user to select an account to make a withdrawal.
     # TODO: If the user chooses to quit, return from the function.
     option = input("Enter 1 for Checking, 2 for Savings, or 'q' to quit: ")

@@ -17,7 +17,7 @@ def handle_transfer(checking, savings):
     After the transfer the function prints the updated balances of both accounts.
     If the user enters an invalid choice, the function displays an error message and prompts again.
     """
-    print("Which account would you like to transfer from?")
+    print("\nWhich account would you like to transfer from?")
     # TODO: Prompt the user to select an account to transfer from.
     # TODO: If the user chooses to quit, return from the function.
     option = input("Enter 1 for Checking, 2 for Savings, or 'q' to quit: ")

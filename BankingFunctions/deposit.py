@@ -11,7 +11,7 @@ def handle_deposit(checking, savings):
     checking (Account): The checking account object.
     savings (Account): The savings account object.
     """
-    print("Which account would you like to make a deposit?")
+    print("\nWhich account would you like to make a deposit?")
     # TODO: Prompt the user to select an account and make a deposit.
     # TODO: If the user chooses to quit, return from the function.
     option = input("Enter 1 for Checking, 2 for Savings, or 'q' to quit: ")
