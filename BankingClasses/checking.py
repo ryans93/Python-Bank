@@ -1,6 +1,6 @@
 """The checking account class."""
 # TODO: Import the BankAccount class from the banking file.
-from banking import BankAccount 
+from BankingClasses.banking import BankAccount 
 # TODO: Implement the CheckingAccount class, which should inherit from the BankAccount class.
 class CheckingAccount(BankAccount):
     """
